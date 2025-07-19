@@ -1,0 +1,18 @@
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><!-- スマートフォン等の環境での画面幅の調整 -->
+    <meta name="format-detection" content="telephone=no"><!-- Safariで数値が自動的にリンク化されてしまう処理を防止 -->
+
+    <!-- ここから先は編集可能 -->
+
+    <!-- ▼ ブラウザのタイトルバーやタブ、検索エンジンの検索結果上で表示されるもの -->
+    <meta name="description" content="このページの説明文">
+    <title>Site name</title><!-- Webページのタイトル -->
+
+    <!-- ▼ スタイルシートの読込-->
+    <!-- ▽ CSSファイル名を変更する場合、ここも修正してください。 -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ▼ このページのみに適用したいCSSがある場合、この中に追加していくと便利です。 -->
+    <style>
+
+    </style>

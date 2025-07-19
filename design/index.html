@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>monooki - テンプレート配布サイト</title>
+<meta name="description" content="簡単にカスタマイズができるWebテンプレートを置いています。小さめの個人・創作サイトさん向け。">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../common.css">
+<style>
+    
+    input[type="text"]{
+        width: 100%;
+    }
+    
+    /* PC向け */
+    @media (min-width: 800px) {
+
+        main {
+            max-width: 100%;
+            flex: 1;
+        }
+    }
+    
+    /* スマホ向け */
+    @media (max-width: 799px) {
+
+        main {
+            max-width: 560px;
+        }
+        .mk_dla {
+            display: none;
+        }
+    }
+    
+</style>
+</head>
+<body>
+
+
+    <!-- ヘッダー -->
+    <header id="header_list"></header>
+
+    <div id="wrap">
+
+        <!-- ナビゲーション -->
+        <aside>
+
+            <!-- ページ内検索フォーム -->
+            <div class="search">
+
+                <article class="flex">
+
+                    <!-- 検索フォーム -->
+                    <div class="abs"><h3 class="mk_sc">検索</h3></div>
+                    <input type="text" style="background:#fff;" id="searchTerm" placeholder="雰囲気・機能などを入力。Enterで次の項目へ。">
+
+                </article>
+                <div>
+
+                    <!-- リセット・前後ボタン -->
+                    <div class="flex_full">
+                        <button onclick="resetSearch()">リセット</button>
+                        <button onclick="previousHighlight()">前へ</button>
+                        <button onclick="nextHighlight()">次へ</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 補足ページ -->
+            <div>
+                <details id="memo">
+                    <summary>検索について</summary>
+                    <article>
+
+                        <p class="mk_i" style="margin-top:15px;">
+                            上記検索スクリプトは <a href="https://www.benricho.org/Tips/ctrl_F/highlight_inpage/" target="_blank">みんなの知識 ちょっと便利帳</a> 様の配布コードを使用しております。
+                        </p>
+
+                        <h4 class="mk_q">タグについて</h4>
+                        <dl class="tag_note">
+
+                            <!--<div>
+        <dt>セット</dt>
+        <dd><b>トップ・ページ・ブログ・小説・アルバム・メールフォームページ</b>が揃ったデザインです。<a href="">*例</a></dd>
+    </div>-->
+
+                            <div>
+                                <dt>ショップ</dt>
+                                <dd>
+                                    ECサイト風のデザインです。<br>
+                                    <strong>※あくまでデザイン（外観）のみであり、決済等はできません。</strong>外部サイト等へリンクしてください。<a href="">*例</a>
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>パスワード</dt>
+                                <dd>
+                                    <strong>※デザイン（外観）のみです。</strong>各サイトやサーバーに合わせてお作りください。<a href="">*例</a>
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>モノクロ</dt>
+                                <dd>
+                                    <b>白黒2色のみ</b>のデザイン。<a href="">*例</a><br>
+                                    「<b>モノトーン</b>」は灰色も含めた無彩色のデザインとしています。<a href="">*例</a>
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>コンパクト</dt>
+                                <dd>
+                                    昔の創作サイトのような、こじんまりとしたデザインです。<a href="">*例</a>
+                                </dd>
+                            </div>
+
+                            <div>
+                                <dt>ダークモード対応</dt>
+                                <dd>
+                                    閲覧者の環境によって暗いデザインに変更されます。不要な方は<code>:root</code>内の指示に従い、該当箇所を削除してください。<a href="">*例</a>
+                                </dd>
+                            </div>
+
+
+                            <div>
+                                <dt>画像不使用</dt>
+                                <dd>
+                                    コードのみで使用可能なデザインです。画像のパスを再度指定する等の手間がいりません。<a href="">*例</a>
+                                </dd>
+                            </div>
+
+                        </dl>
+
+                        <h4 class="mk_ex">注意事項</h4>
+
+                    </article>
+                </details>
+            </div>
+        </aside>
+
+        <main>
+
+            <h2>Template</h2>
+            <!--hgroup class="line">
+                <h2>Template</h2>
+                <p>HTML･CSSコード＆ファイル配布</p>
+            </hgroup-->
+            <section>
+
+                <div class="flex_pc" style="margin-bottom:15px;">
+
+                    <div>
+
+                        <h4 class="mk_i">動作確認</h4>
+                        <p>以下の環境で行っています。</p>
+                        <ul>
+                            <li>Google Chrome (Windows11,Pixel9)</li>
+                            <li>Microsoft Edge (Windows11)</li>
+                            <li>FireFox (Windows11)</li>
+                            <li>Safari (iPad)</li>
+                        </ul>
+
+                    </div>
+
+                    <div style="flex:1;">
+
+                        <h4 class="mk_ex">利用規約</h4>
+                        <ul>
+                            <li>
+                                改変の有無にかかわらず、<b>再配布は禁止</b>です。<br>
+                                <small>※2025年1月28日以前に投稿されたテンプレートの再配布については問題ありません。</small>
+                            </li>
+                            <li>公序良俗に反するサイトでの使用は禁止です。</li>
+                            <li>リンクおよび制作者表記は任意です。</li>
+                            <li><a href="">BOOTH</a> および <a href="">https://img-papa.github.io/monooki/design/</a>（このページ）以下で配布されているソースコード<b><u>以外</u></b>は
+                            <b>テンプレートとして使用禁止</b>です。</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <p class="mk_i">
+                    <a href="" target="_blank">ナノ</a> ユーザーの方は［テンプレを探す］→［ユーザーID］検索［kaigou］で簡単に導入できます。
+                    <br><small>※デコヤさん以外の素材を利用したテンプレートを除く（規約上投稿できないため）</small>
+                </p>
+
+                <p class="mk_ex">
+                    ［<b>ZIP DL</b>］をクリックすると<strong>即時ダウンロードが開始されます</strong>。
+                </p>
+
+                <h4 class="mk_str">おすすめカスタマイズ・編集方法</h4>
+                <ul style="max-width:720px;">
+                    <li>
+                        ほとんどのテンプレートが<em>配色変更可能</em>です。編集方法は各CSSの<code>:root</code>をご参照ください。
+                    </li>
+                    <li>
+                        文字列の一括置換ができるソフト等をご利用の方は、HTML内の『<b>Site name</b>』を<b>サイト名</b>に、『<b>https://site.url/</b>』を<b>サイトURL</b>に置換してください。
+                    </li>
+                </ul>
+
+            </section>
+
+            <article id="contents">
+                <!-- この中にJavaScriptでリスト作成 -->
+            </article>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- 600px以上のみ detailsを開いた状態にする -->
+    <script>
+
+        const details = document.getElementById('memo');
+        const mediaQuery = window.matchMedia('(min-width: 800px)');
+
+        function handleMediaQuery(e) {
+            if (e.matches) {
+                details.open = true;
+            } else {
+                details.open = false;
+            }
+        }
+
+        mediaQuery.addListener(handleMediaQuery); // IE11以前のブラウザに対応
+        handleMediaQuery(mediaQuery); // 初期化
+
+    </script>
+    <script src="../header.js"></script>
+    <script src="list_create.js"></script>
+    <script src="highlight_inpage.js"></script>
+
+</body>
+</html>
